@@ -1,0 +1,10 @@
+{
+  "name": "space-schedule-manager",
+  "version": "0.1.0",
+  "title": "Space Schedule Manager",
+  "author": "farzag",
+  "factorio_version": "2.0",
+  "dependencies": ["base >= 2.0.55", "flib >= 0.15.0"],
+  "multiplayer": "yes",
+  "description": "More easily manage schedules for space platforms."
+}
