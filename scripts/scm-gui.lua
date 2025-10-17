@@ -1,6 +1,5 @@
 local ScmGui = {}
 
-
 ---@param player LuaPlayer
 ---@return PlayerData
 function ScmGui.build(player)
@@ -24,7 +23,7 @@ function ScmGui.build(player)
             {
               type = "label",
               style = "frame_title",
-              caption = {"mod-name.FactorySearch"},
+              caption = {"mod-name.space-schedule-manager"},
               ignored_by_interaction = true,
             },
             {type = "empty-widget", style = "fs_flib_titlebar_drag_handle", ignored_by_interaction = true},
@@ -73,7 +72,7 @@ function ScmGui.open(player, player_data)
   end
   refs.frame.visible = true
   refs.frame.bring_to_front()
-  player.set_shortcut_toggled("search-factory", true)
+  player.set_shortcut_toggled("scm-shortcut", true)
 end
 
 ---@param player LuaPlayer
@@ -122,7 +121,7 @@ end
 
 ---@param player LuaPlayer
 function ScmGui.after_close(player)
-  player.set_shortcut_toggled("space-schedule-manager", false)
+  player.set_shortcut_toggled("scm-shortcut", false)
 end
 
 ---@param player LuaPlayer

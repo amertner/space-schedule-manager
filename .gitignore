@@ -1,1 +1,4 @@
 *.zip
+.vscode/launch.json
+.vscode/settings.json
+.DS_Store

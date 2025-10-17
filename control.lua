@@ -3,6 +3,7 @@ event_handler = require "event_handler"
 util = require "util"
 
 gui = require "scripts.flib-gui"
+CustomInput = require "scripts.custom-input"
 ScmGui = require "scripts.scm-gui"
 
 ---@class (exact) ScmGuiRefs
@@ -29,7 +30,7 @@ local function on_configuration_changed()
   for player_index, player_data in pairs(storage.players) do
     local player = game.get_player(player_index)
     if player then
-      --SearchGui.destroy(player, player_data)
+      ScmGui.destroy(player, player_data)
     else
       storage.players[player_index] = nil
     end
@@ -42,5 +43,6 @@ Control.on_configuration_changed = on_configuration_changed
 event_handler.add_libraries{
   gui --[[@as event_handler]],
   Control,
+  CustomInput,
   ScmGui
 }
