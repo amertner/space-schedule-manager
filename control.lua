@@ -3,6 +3,7 @@ event_handler = require "event_handler"
 util = require "util"
 
 gui = require "scripts.flib-gui"
+ScmGui = require "scripts.scm-gui"
 
 ---@class (exact) ScmGuiRefs
 ---@field frame LuaGuiElement frame
@@ -41,4 +42,5 @@ Control.on_configuration_changed = on_configuration_changed
 event_handler.add_libraries{
   gui --[[@as event_handler]],
   Control,
+  ScmGui
 }
